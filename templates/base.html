@@ -16,8 +16,9 @@
    <body class="body-main">
       {% include 'navbar.html' %}
       <div class="container-fluid">
-         <div class="row sidebar">
-            <nav class="col-md-2 d-none d-md-block">
+         <div class="row">
+            <nav class="col-md-2 d-none d-md-block sidebar">
+               <div class="sidebar">
                   <ul class="nav flex-column">
                      <li class="nav-item">
                         <a class="nav-link active" href="#">
@@ -27,14 +28,15 @@
                         </a>
                      </li>
                   </ul>
-            </nav>      
+               </div>
+            </nav>
+            <main role="main" class="col-md-9">
+               <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">
+                     {% block content %}
+                     {% endblock %}
+               </div>
+            </main>
          </div>
-         <main role="main" class="col-md-9">
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">
-                  {% block content %}
-                  {% endblock %}
-            </div>
-         </main>
       </div>
       <!--   Core JS Files   -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
