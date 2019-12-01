@@ -3,6 +3,7 @@ from user.forms import RegisterForm, LoginForm
 
 import bcrypt
 from user.models import User
+import sys
 
 user_app = Blueprint('user_app', __name__)
 
@@ -25,7 +26,7 @@ def login():
 					session.pop('next')
 					return redirect(next)
 				else:
-					return 'User logged in'
+					return render_template('home.html')
 			else:
 				user = None
 		if not user:
@@ -56,5 +57,8 @@ def register():
 
 @user_app.route('/profile', methods=('GET', 'POST'))
 def profile():
-	return render_template('user/profile.html')
+	#print(username, file=sys.stdout)
+	#user = User.objects.filter(username=username).first()
+	user = session['username']
+	return render_template('user/profile.html', user=user)
 
