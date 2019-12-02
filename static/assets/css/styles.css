@@ -22,10 +22,12 @@
     z-index: -1;
     height: 100%;
     width: 58px;
+    padding-top: 70px;
 }
 .main_sidebar ul {
     list-style:none;
     padding-left:58px;
+    padding-top: 70px;
 }
 .main_sidebar ul li {
     padding:10px;
