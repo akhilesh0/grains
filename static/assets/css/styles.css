@@ -43,15 +43,21 @@
     font-size:24px;
     padding-left:7px;
 }
-.main_sidebar ul li:hover {
+
+.main_sidebar ul li:hover,
+.main_sidebar ul li:focus {
+    color: #ffa500;
     background:#167696;
 }
-.main_sidebar ul li a:hover {
-    color:#fff;
+
+.main_sidebar ul li a:hover, 
+.main_sidebar ul li a:focus {
+    color:#ffa500;
     text-decoration:none;
 }
-.main_sidebar ul li:hover i {
-    color:#fff;
+.main_sidebar ul li:hover i,
+.main_sidebar ul li:focus i {
+    color:#ffa500;
 }
 .main_sidebar ul li.active {
     background:#0f4698;
@@ -59,9 +65,11 @@
 .main_sidebar ul li.active i {
     color:#fff;
 }
-.main_sidebar ul li.active:hover {
+.main_sidebar ul li.active:hover,
+.main_sidebar ul li.active:focus {
     background:#167696;
 }
-.main_sidebar ul li.active:hover i {
-    color:#fff;
+.main_sidebar ul li.active:hover i,
+.main_sidebar ul li.active:focus i {
+    color:#ffa500;
 }

@@ -3,6 +3,10 @@
   z-index: 1001;
 }
 
+.navbar-brand {
+  margin-left: 20px;
+}
+
 .navbar .navbar-brand {
   color: #a9a9a9;
 }
