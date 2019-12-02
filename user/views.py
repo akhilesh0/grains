@@ -61,4 +61,3 @@ def profile():
 	#user = User.objects.filter(username=username).first()
 	user = session['username']
 	return render_template('user/profile.html', user=user)
-
