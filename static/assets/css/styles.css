@@ -1,5 +1,5 @@
 .top-buffer { 
-	margin-top:40px; 
+	margin-top:40px;
 }
 
 .main_sidebar {
@@ -16,7 +16,7 @@
 }
 .main_sidebar:after {
     content: '';
-    background-color: #253238;
+    background-color: #030f25;
     position: absolute;
     top: 0;
     z-index: -1;
