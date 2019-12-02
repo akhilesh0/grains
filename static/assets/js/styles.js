@@ -1,3 +1,3 @@
 function myFunction(x) {
-  x.classList.toggle("fa-chevron-left");
+  x.classList.toggle("fa-angle-double-left");
 }
