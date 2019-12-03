@@ -49,14 +49,6 @@
     padding-left:7px;
 }
 
-/*
-.main_sidebar ul li:hover,
-.main_sidebar ul li:focus {
-    color: #ffa500;
-    background:#167696;
-}
-*/
-
 .main_sidebar ul li a:hover, 
 .main_sidebar ul li a:focus, 
 .offcanvas ul li a:focus {
@@ -68,23 +60,7 @@
 .main_sidebar ul li:focus i {
     color:#ffa500;
 }
-/*
-.main_sidebar ul li.active {
-    background:#0f4698;
-}
-.main_sidebar ul li.active i {
-    color:#fff;
-}
 
-.main_sidebar ul li.active:hover,
-.main_sidebar ul li.active:focus {
-    background:#167696;
-}
-.main_sidebar ul li.active:hover i,
-.main_sidebar ul li.active:focus i {
-    color:#ffa500;
-}
-*/
 @media screen and (max-height: 450px) {
   .main_sidebar {padding-top: 15px;}
   .main_sidebar ul li a {font-size: 18px;}
