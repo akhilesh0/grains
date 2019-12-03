@@ -16,30 +16,28 @@
    <body class="body-main">
       {% include 'navbar.html' %}
         <div class="container-fluid">
-			    <div class="row top-buffer justify-content-center align-items-center">
-			        <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
-			        	<div class="card">
-			  				<div class="card-body">
-			  					<h5 class="card-title">User Login</h5>
-								{% if error %}
-								<div class="error text-danger">{{ error }}</div>
-								{% endif %}
+            <div class="login-container">
+                <div id="output"></div>
+                <div class="avatar">
+                   <img width="100" height="100" src="{{ url_for('static', filename='assets/img/icon.png') }}">
+                </div>
+                <div class="form-box">
+                    {% if error %}
+                        <div class="error text-danger">{{ error }}</div>
+                    {% endif %}
 
-								{% from "_formhelpers.html" import render_field %}
-								<form method="POST" action="{{ url_for('.login') }}" role="form">
+                    {% from "_formhelpers.html" import render_field %}
+                    <form method="POST" action="{{ url_for('.login') }}" role="form">
 
-									{{ form.hidden_tag() }}
-									{{ render_field(form.username, class='form-control') }}
+                        {{ form.hidden_tag() }}
+                        {{ render_field(form.username, class='form-control') }}
+                        {{ render_field(form.password, class='form_control') }}
 
-									{{ render_field(form.password, class='form_control') }}
-
-									<button type="submit" class="btn btn-info btn-lg btn-block">Login</button>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-		</div>
+                        <button type="submit" class="btn btn-block login">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
       </div>
       <!--   Core JS Files   -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
