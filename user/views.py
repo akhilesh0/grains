@@ -61,3 +61,7 @@ def profile():
 	#user = User.objects.filter(username=username).first()
 	user = session['username']
 	return render_template('user/profile.html', user=user)
+
+@user_app.route('/un', methods=('GET', 'POST'))
+def un():
+	return render_template('untitled.html')
