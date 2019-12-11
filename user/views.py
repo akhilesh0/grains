@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request, redirect, session, url_for
 from user.forms import RegisterForm, LoginForm
+from user.decorators import login_required
 
 import bcrypt
 from user.models import User
@@ -56,6 +57,7 @@ def register():
 	return render_template('user/register.html', form=form)
 
 @user_app.route('/profile', methods=('GET', 'POST'))
+@login_required
 def profile():
 	#print(username, file=sys.stdout)
 	#user = User.objects.filter(username=username).first()
