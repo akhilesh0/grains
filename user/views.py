@@ -4,7 +4,6 @@ from user.decorators import login_required
 
 import bcrypt
 from user.models import User
-import sys
 
 user_app = Blueprint('user_app', __name__)
 
@@ -60,8 +59,6 @@ def register():
 @user_app.route('/profile', methods=('GET', 'POST'))
 @login_required
 def profile():
-	#print(username, file=sys.stdout)
-	#user = User.objects.filter(username=username).first()
 	user = session['username']
 	return render_template('user/profile.html', user=user)
 

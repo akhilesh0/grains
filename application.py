@@ -13,4 +13,7 @@ def create_app(**config_overrides):
 	from user.views import user_app
 	app.register_blueprint(user_app)
 
+	from workflow.views import workflow_app
+	app.register_blueprint(workflow_app)
+
 	return app
